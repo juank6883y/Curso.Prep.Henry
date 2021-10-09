@@ -1,0 +1,25 @@
+• Variables: Una variable es donde se guarda (y se recupera) datos que se utilizan en un programa. Cuando escribimos código, las variables se utilizan para:
+- Guardar datos y estados.
+- Asignar valores de una variable a otra.
+- Representar valores dentro de una expresión matemática.
+- Mostrar valores por pantalla.
+Todas las variables deben ser de un tipo de datos, ya sea un dato de tipo primitivo, como un número o texto, o un dato abstracto, como un objeto que se ha creado.
+Así que básicamente podemos decir que una variable es
+Tipo de dato → identificador variable → valor almacenado.
+• Strings: Un string en realidad es un conjunto ordenado de letras (caracteres). Supongamos que tienes: string nombre = "Juan"; nombre es una variable que contiene 4 caracteres: la J, la u, la a y la n. Se puede acceder a cada uno de los elementos de este conjunto refiriéndose a la posición que ocupan, empezando por el 0. Es decir:
+- Puedes acceder a la J con nombre[0]
+- Puedes acceder a la u con nombre[1]
+- Puedes acceder a la a con nombre[2]
+- Puedes acceder a la n con nombre[3]
+• Funciones (argumentos, return): En programación, una función es una sección de un programa que calcula un valor de manera independiente al resto del programa. Una función tiene tres componentes importantes:
+- los parámetros, que son los valores que recibe la función como entrada;
+- el código de la función, que son las operaciones que hace la función; y
+- el resultado (o valor de retorno), que es el valor final que entrega la función.
+En esencia, una función es un mini programa. Sus tres componentes son análogos a la entrada, el proceso y la salida de un programa.
+• Declaraciones if: Un if en programación se utiliza para evaluar una expresión condicional: si se cumple la condición (es verdadera), ejecutará un bloque de código. Si es falsa, es posible ejecutar otras sentencias.
+Como hemos dicho, la condición es una condición lógica, sólo devolverá true o false, y se ejecutará si su valor es true. ¿Cómo funciona un if? Primero de todo, se evalúa la condicion. Si el resultado se cumple, se ejecutará el código. Si el resultado no es true, el programa continúa con la sentencia siguiente. Lo habitual es que, si hay varias instrucciones que interesan ejecutar dónde de la evaluación, estén agrupadas con llaves { }.
+• Valores booleanos (true, false): Un valor booleano representa un valor de verdad; es decir, TRUE o FALSE. Una expresión booleana o predicado puede producir un valor de desconocido (unknown), que está representado por el valor nulo. Los siguientes tipos de datos se pueden convertir en el tipo de datos BOOLEAN:
+- CHAR o VARCHAR se puede convertir en un valor BOOLEAN:
+a) Convertir en TRUE: 't' , 'true' , 'y', 'yes' , 'on' ,'1'
+b) Convertir en FALSE: 'f', 'false', 'n', 'no', 'off', '0'
+Una serie puede utilizar cualquier combinación de caracteres en mayúsculas y minúsculas ('yes', 'YES', 'Yes', 'yES', etcétera).

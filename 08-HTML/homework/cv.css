@@ -1,0 +1,122 @@
+body {
+    background-image: url('https://saboryestilo.com.mx/wp-content/uploads/2019/10/calabazas-de-halloween-superama.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+*{
+    margin: 0;
+	padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+h1, h3{
+    text-align: center;
+    color: orangered;
+}
+
+section{
+    width: 80%; 
+    margin: auto auto 100px auto; 
+    background-color: greenyellow;
+    border: 2px solid #f00;
+}
+
+section h1, h3 {
+	text-align: center;
+    color: orangered;
+}
+
+article {
+	text-align: left;
+}
+
+ul {
+    margin-bottom: 10px;
+}
+
+li {
+	margin: 1px 0 1px 18px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    padding-bottom: 16px;
+    z-index:2000;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	background-color: #008080;
+	height: 10vh;
+}
+
+footer p {
+	color: #ffbf00;
+}
+
+.photo-section {
+    display: flex;
+	flex-direction: column;
+}
+
+.photo-section img {
+    align-self: center;
+    width: 400px;
+    height: 400px;
+}
+
+.description2-section{
+    background-color: mediumturquoise;
+    border: 4px dashed blue;
+}
+
+@media (min-width: 700px) {
+	h1{
+    	font-size: 3.5rem;
+    }
+    h3{
+    	font-size: 2rem;
+    }
+	p{
+    	font-size: 1.3rem;
+    }
+	.titles-section h3{
+    	font-size: 1.7rem;
+    	margin-bottom: 10px;
+    }	
+}
+
+@media (max-width: 499px) {
+	html{
+        font-size:0.9rem;
+    }
+	section {
+    	margin-bottom: 25px;
+    }
+	.hero-section {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	.description-section {
+		margin-bottom: 40px;
+	}
+	.titles-section {
+    	margin-bottom: 20px;
+    }
+}
+
+
+

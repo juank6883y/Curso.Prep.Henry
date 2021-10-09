@@ -1,0 +1,21 @@
+•for: El bucle FOR se utiliza para repetir una o más instrucciones un determinado número de veces. De entre todos los bucles, el FOR se suele utilizar cuando sabemos seguro el número de veces que queremos que se ejecute. La sintaxis del bucle for se muestra a continuación.
+for (inicialización; condición; actualización) { 
+   	//sentencias a ejecutar en cada iteración 
+}
+El bucle FOR tiene tres partes incluidas entre los paréntesis, que nos sirven para definir cómo deseamos que se realicen las repeticiones. La primera parte es la inicialización, que se ejecuta solamente al comenzar la primera iteración del bucle. En esta parte se suele colocar la variable que utilizaremos para llevar la cuenta de las veces que se ejecuta el bucle. La segunda parte es la condición, que se evaluará cada vez que comience una iteración del bucle. Contiene una expresión para decidir cuándo se ha de detener el bucle, o mejor dicho, la condición que se debe cumplir para que continúe la ejecución del bucle. Por último tenemos la actualización, que sirve para indicar los cambios que queramos ejecutar en las variables cada vez que termina la iteración del bucle, antes de comprobar si se debe seguir ejecutando. Después del for se colocan las sentencias que queremos que se ejecuten en cada iteración, acotadas entre llaves.
+•&&, ||, !:
+- &&: El operador AND es representado con dos ampersands &&. En la programación clásica, AND retorna true si ambos operandos son valores verdaderos y false en cualquier otro caso. El operador AND && realiza lo siguiente:
+• Evalúa los operandos de izquierda a derecha.
+• Para cada operando, los convierte a un booleano. Si el resultado es false, se detiene y retorna el valor original de dicho operando.
+• Si todos los operandos han sido evaluados (todos fueron valores verdaderos), retorna el último operando.
+En otras palabras, AND retorna el primer valor falso o el último valor si ninguno fue encontrado.
+- ||: El operador OR se representa con dos símbolos de linea vertical. En la programación clásica, el OR lógico esta pensado para manipular solo valores booleanos. Si cualquiera de sus argumentos es true, retorna true, de lo contrario retorna false. En JavaScript, el operador es un poco más complicado y poderoso. Pero primero, veamos qué pasa con los valores booleanos. El operador OR || realiza lo siguiente:
+• Evalúa los operandos de izquierda a derecha.
+• Para cada operando, convierte el valor a booleano. Si el resultado es true, se detiene y retorna el valor original de ese operando.
+• Si todos los operandos han sido evaluados (todos eran false), retorna el ultimo operando.
+En otras palabras, una cadena de OR "||" devuelve el primer valor verdadero o el último si ningún verdadero es encontrado.
+- !: El operador booleano NOT se representa con un signo de exclamación !. 
+El operador acepta un solo argumento y realiza lo siguiente:
+1. Convierte el operando al tipo booleano: true/false.
+2. Retorna el valor contrario.
+La precedencia de NOT ! es la mayor de todos los operadores lógicos, así que siempre se ejecuta primero, antes que && o ||.

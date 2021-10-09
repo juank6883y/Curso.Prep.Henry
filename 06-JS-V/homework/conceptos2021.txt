@@ -1,0 +1,90 @@
+•Prototype: En JavaScript el prototipo de un objeto está definido de forma predeterminada como una “propiedad oculta” de todo objeto, a la que podemos acceder con la sintaxis: nombreObjeto.prototype. El prototipo es a su vez un objeto (recuerda que una propiedad puede ser tanto un tipo primitivo como un objeto) y por tanto a dicho objeto se le pueden añadir propiedades y métodos.
+
+Dado que JavaScript ofrece numerosas alternativas para trabajar con objetos, propiedades y métodos, existen numerosas alternativas para definir el prototipo de un objeto.
+
+Alternativa 1: definir propiedades y métodos con la notación de punto:
+
+function nombreObjeto (par1, par2, …, parN) {
+
+this.propiedad1 = valorPropiedad1;
+
+this.propiedad2 = valorPropiedad2;
+
+…
+
+}
+
+nombreObjeto.prototype.propiedadComún1 = valorPropieadadComún1;
+
+nombreObjeto.prototype.propiedadComún2 = valorPropieadadComún2;
+
+…
+
+nombreObjeto.prototype.métodoComún1 = function (par1, par2, …) { … }
+
+nombreObjeto.prototype.métodoComún2 = function (par1, par2, …) { … }
+
+Alternativa 2: definir un objeto y convertir una instancia de dicho objeto en prototipo:
+
+function nombreObjeto (par1, par2, …, parN) {
+
+this.propiedad1 = valorPropiedad1; this.propiedad2 = valorPropiedad2; …
+
+}
+
+function objetoDestinadoASerPrototipo (par1, par2, …) { … }
+
+nombreObjeto.prototype = new objetoDestinadoASerPrototipo();
+
+Las propiedades y métodos de un prototipo a veces se dice que son propiedades y métodos de clase o estáticas tratando de buscar analogías con otros lenguajes.
+
+Alternativa 3: definir un objeto y asignarle contenido a su propiedad prototype creando un objeto único con la sintaxis de literal (propiedades enumeradas con dos puntos y separadas por comas):
+
+function nombreObjeto (par1, par2, …, parN) {
+
+this.propiedad1 = valorPropiedad1; this.propiedad2 = valorPropiedad2; …
+
+}
+
+nombreObjeto.prototype = {
+
+propiedadComún1: valorPropiedadComún1;
+
+propiedadComún2: valorPropiedadComún2;
+
+…
+
+métodoComún1: function (par1, par2, …, parN) { … },
+
+métodoComún2: function (par1, par2, …, parN) { … },
+
+…
+
+}
+
+•Constructors (de Clases): Cuando se construye un objeto es necesario inicializar sus variables con valores coherentes, imaginemos un objeto de la clase Persona cuyo atributo color de pelo al nacer sea verde, un estado incorrecto tras construir el objeto persona. La solución en los lenguajes orientados a objetos es emplear los constructores. Un constructor es un método perteneciente a la clase que posee unas características especiales:
+• Se llama igual que la clase.
+• No devuelve nada, ni siquiera void.
+• Pueden existir varios, pero siguiendo las reglas de la sobrecarga de funciones.
+• De entre los que existan, tan sólo uno se ejecutará al crear un objeto de la clase.
+Dentro del código de un constructor generalmente suele existir inicializaciones de variables y objetos, para conseguir que el objeto sea creado con dichos valores iniciales.
+Para definir los constructores se emplea la siguiente sintaxis:
+
+         
+         [modifVisibilidad] nombreConstructor (listaParámetros) [throws listaExcepciones]
+         {
+         }
+         
+Para modifVisibilidad se aplica las mismas normas que para atributos y métodos:
+public: indica que es un método accesible a través de una instancia del objeto.
+private: indica que a través de una instancia no es accesible el método. Al heredar el método se convierte en inaccesible.
+protected: indica que a través de una instancia no es accesible el método. Al heredar si se puede usar desde la clase derivada.
+Sin especificar: indica visibilidad de paquete, se puede acceder a través de una instancia, pero sólo de clases que se encuentren en el mismo paquete.
+nombreConstructor debe de coincidir con el nombre de la clase.
+
+listaParámetros es la lista de los parámetros que tomará la función separados por comas y definidos cada uno de ellos como:
+	       tipo nombreParámetro
+	      
+La cláusula opcional throws es empleada para indicar que dentro del método se pueden generar errores en su ejecución, y que debemos estar preparados para tratarlos.
+listaExcepciones es el nombre de todos esos posibles errores, su utilización la veremos en el punto dedicado a la gestión de errores mediante try y catch.
+El constructor posee un par de llaves, dentro de las cuales estará el código que se ejecutará al ser llamada la función. Dicho código estará formado por instrucciones válidas en el lenguaje, finalizadas generalmente por punto y coma.
